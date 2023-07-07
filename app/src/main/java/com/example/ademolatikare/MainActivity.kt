@@ -6,19 +6,22 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.ademolatikare.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    //Setup app variables
     private lateinit var binding: ActivityMainBinding
     private var teamOneScore = 0
     private var teamTwoScore = 0
     private var gamePoint = 1;
 
+    //Inflate view
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar);
         setupEvents()
     }
 
+    //Setup app event listeners
     private  fun setupEvents(){
         binding.btnAddTeamOne.setOnClickListener {
             teamOneScore  = scoreValidation(teamOneScore+gamePoint)
@@ -37,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             updateTeamTwoScore()
         }
 
+        //Allows us to know the selection game point to be used
         binding.gamePointOptions.setOnCheckedChangeListener { _, checkedId ->
 
             // Check which radio button was clicked
@@ -54,14 +58,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Update team one's score
     private fun updateTeamOneScore(){
         binding.tvScoreTeamOne.text = teamOneScore.toString()
     }
 
+    //Update team two's score
     private fun updateTeamTwoScore(){
         binding.tvScoreTeamTwo.text = teamTwoScore.toString()
     }
 
+
+    //Validate the score value (i.e min =0 and max = 20) and returns the appropriate value
     private fun scoreValidation(value: Int): Int{
         if(value<0){
             Toast.makeText(this, "Minimum score is 0",Toast.LENGTH_LONG).show()
