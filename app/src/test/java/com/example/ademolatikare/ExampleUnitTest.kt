@@ -1,4 +1,4 @@
-package com.example.AdemolaTikare
+package com.example.ademolatikare
 
 import org.junit.Test
 
