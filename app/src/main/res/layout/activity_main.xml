@@ -34,7 +34,7 @@
 
 
     <TextView
-        android:id="@+id/tv_score_one"
+        android:id="@+id/tv_score_team_one"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -48,7 +48,7 @@
         />
 
     <TextView
-        android:id="@+id/tv_score_two"
+        android:id="@+id/tv_score_team_two"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -64,76 +64,75 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_add_one"
+        android:id="@+id/btn_add_team_one"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/dp_16"
         android:backgroundTint="@android:color/holo_green_dark"
         android:text=" + "
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         app:cornerRadius="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_score_one"
-        app:layout_constraintStart_toStartOf="@+id/tv_score_one"
-        app:layout_constraintStart_toEndOf="@+id/btn_add_two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_score_team_one"
+        app:layout_constraintStart_toEndOf="@+id/btn_minus_team_one"
         app:strokeColor="@android:color/holo_green_dark" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_minus_one"
+        android:id="@+id/btn_minus_team_one"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="@dimen/dp_16"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@android:color/darker_gray"
         android:text=" - "
         android:layout_marginTop="@dimen/dp_16"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         app:cornerRadius="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_score_one"
-        app:layout_constraintStart_toEndOf="@+id/btn_add_one"
-        app:layout_constraintEnd_toEndOf="@+id/tv_score_one"
+        app:layout_constraintTop_toBottomOf="@+id/tv_score_team_one"
+        app:layout_constraintStart_toStartOf="@+id/tv_score_team_one"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_team_one"
         app:strokeColor="@android:color/holo_green_dark" />
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_add_two"
+        android:id="@+id/btn_add_team_two"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/dp_16"
         android:backgroundTint="@android:color/holo_green_dark"
         android:text=" + "
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         app:cornerRadius="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_score_two"
-        app:layout_constraintStart_toStartOf="@+id/tv_score_two"
-        app:layout_constraintStart_toEndOf="@+id/btn_minus_two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_score_team_two"
+        app:layout_constraintEnd_toEndOf="@+id/tv_score_team_two"
+        app:layout_constraintStart_toEndOf="@+id/btn_minus_team_two"
         app:strokeColor="@android:color/holo_green_dark" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_minus_two"
+        android:id="@+id/btn_minus_team_two"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="@dimen/dp_16"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="8dp"
         android:backgroundTint="@android:color/darker_gray"
         android:text=" - "
         android:layout_marginTop="@dimen/dp_16"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         app:cornerRadius="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_score_two"
-        app:layout_constraintStart_toEndOf="@+id/btn_add_two"
-        app:layout_constraintEnd_toEndOf="@+id/tv_score_two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_score_team_two"
+        app:layout_constraintStart_toStartOf="@+id/tv_score_team_two"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_team_two"
         app:strokeColor="@android:color/holo_green_dark" />
 
 
@@ -144,15 +143,15 @@
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="@dimen/dp_16"
-        app:layout_constraintTop_toBottomOf="@+id/btn_add_one"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_team_one"
         android:layout_marginTop="@dimen/dp_24"
         android:text="Basketball Sport Point:  "
         android:textSize="14sp"
         />
 
 
-    <LinearLayout
-        android:id="@+id/options"
+    <RadioGroup
+        android:id="@+id/gamePointOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/sport_title"
@@ -162,6 +161,7 @@
         <RadioButton
             android:id="@+id/score1RadioButton"
             android:layout_width="wrap_content"
+            android:checked="true"
             android:layout_height="wrap_content"
             android:text="1 point" />
 
@@ -177,7 +177,7 @@
             android:layout_height="wrap_content"
             android:text="3 points" />
 
-    </LinearLayout>
+    </RadioGroup>
 
 
 
