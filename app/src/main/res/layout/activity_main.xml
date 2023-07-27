@@ -19,9 +19,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/toolbar"
             app:title="Game Point App"
-            android:background="@color/white"
             android:minHeight="?attr/actionBarSize"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight">
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -85,13 +84,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_add_team_one"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        style="@style/buttonStyle"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginEnd="@dimen/dp_16"
         android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/dp_16"
-        android:backgroundTint="@android:color/holo_green_dark"
         android:text=" + "
         android:textAllCaps="false"
         android:textColor="@android:color/white"
@@ -103,7 +101,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_minus_team_one"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        style="@style/buttonStyle2"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="@dimen/dp_16"
@@ -122,13 +120,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_add_team_two"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        style="@style/buttonStyle"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginEnd="@dimen/dp_16"
         android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/dp_16"
-        android:backgroundTint="@android:color/holo_green_dark"
         android:text=" + "
         android:textAllCaps="false"
         android:textColor="@android:color/white"
@@ -140,7 +137,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_minus_team_two"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        style="@style/buttonStyle2"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="@dimen/dp_16"
