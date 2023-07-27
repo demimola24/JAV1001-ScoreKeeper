@@ -21,4 +21,19 @@
         <item name="backgroundTint">@color/teal_200</item>
         <item name="rippleColor">@color/teal_200</item>
     </style>
+
+    <style name="radio">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:buttonTint">@color/green_light</item>
+        <item name="android:textColor">@color/green_light</item>
+        <item name="android:textColorHint">@color/green_light</item>
+        <item name="android:editTextColor">@color/green_light</item>
+    </style>
 </resources>
